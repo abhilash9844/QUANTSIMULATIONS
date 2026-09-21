@@ -29,6 +29,11 @@ n=int(input("Enter the no of Iteration: "))
 z=experiment(n)
 print("\nTHE EXPERIMENT VALUE OF E_Q(X) is : ",z)
 print("\nTHE THEORYTICAL VALUE OF E_Q(X) is : ",29/8)
-#I have consider the probability measure Q[1/8,3/8,1/2] because we know that 
-#a person always tries to spend less money and it is not P[1/3,1/3,1/3] like in 
-#previous case 
+
+'''
+I have consider the probability measure Q[1/8,3/8,1/2] because we know that 
+a person always tries to spend less money and it is not P[1/3,1/3,1/3] like in 
+previous case.
+so here I'm using radon-nikodym derivative to find the E_Q(X).
+'''
+
