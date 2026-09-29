@@ -57,7 +57,7 @@ In the simulation, $\Pi(X, Y, N, M)$ is estimated empirically by:
 2. Among those specific paths, counting how many ended up at position $X$ at step $N$ (let this count be `count`).
 3. Taking the ratio:
 
-$$\widehat{\Pi}(X, Y, N, M) = \frac{\text{count}}{\text{total}} = \frac{\#\{S_N = X \text{ and } S_M = Y\}}{\#\{S_M = Y\}}$$
+$$\widehat{\Pi}(X, Y, N, M) = \frac{\text{count}}{\text{total}} = \frac{\text{number of paths with } S_N = X \text{ and } S_M = Y}{\text{number of paths with } S_M = Y}$$
 
 If no simulated path visited position $Y$ at step $M$ (`total == 0`), the function returns $0$.
 
@@ -150,7 +150,7 @@ The implementation is kept deliberately straightforward in [`b.py`](b.py). It us
 
 ### 1. Random Walk Paths
 
-![Random Walk Paths](plots/Random_Walk%20_aths.png)
+![Random Walk Paths](plots/Random_Walk_paths.png)
 
 This plot shows sample trajectories of the symmetric random walk starting from position $0$ at time step $0$. At each discrete time step, each path branches either $+1$ or $-1$. By time step $N = 4$, the trajectories have fanned out into a discrete lattice of accessible positions: $-4, -2, 0, 2, 4$.
 
